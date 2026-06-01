@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: 'http://localhost:5000/api',
+  baseURL: import.meta.env.VITE_API_URL || 'https://connecthub-backend-i7fy.onrender.com/api',
 });
 
 // Add a request interceptor to attach the JWT token
